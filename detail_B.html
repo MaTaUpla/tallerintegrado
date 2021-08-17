@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block title %}
+Taller Integral
+{% endblock %}
+{% block content %} 
+<div id="slider">    
+    <h1> {{ data.nombre }} </h1> 
+    <img src="{{ data.foto_perfil }}" width="100px" height="100px">
+</div>
+<div id="body_streams">
+    <div id="perfil_text">Creacion Canal: {{ data.fecha }}</div>
+    <div id="perfil_text">Numero Visitas totales: {{ data.visitas }}</div>
+    <div id="perfil_text">Tipo de Partner: {{ data.partner }}</div>
+    <div id="perfil_text">Canal: <a href="https://twitch.tv/{{ data.nombre }}" class="canal">{{ data.nombre }}</a> </div>
+</div>
+<div id="body_streams_B">
+</div>
+<footer>
+    <div id="footer">
+        <p>Creador Matias Tapia - Ingenieria informatica</p>
+        <p>Trabajo final Taller Integrado</p>
+    </div>
+</footer>
+{% endblock %}

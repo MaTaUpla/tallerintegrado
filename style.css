@@ -1,0 +1,387 @@
+header{
+    width: 80%;
+    height: 15%;
+    background-color: #060606;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#title_A{
+    color: #303;
+}
+
+#banner{
+    width:28%;
+    height:98%;
+    float: left;
+}
+
+#menu_A{
+    width:28%;
+    height:30%;
+    padding-top: 5%;
+    float:left;
+    padding-left: 1%;
+}
+
+#menu_B{
+    width:28%;
+    height:30%;
+    padding-top: 5%;
+    float:right;
+    padding-right: 1%;
+}
+
+a.botmenu_A {
+	color: #ccc;
+	float:left;
+	width:28%;
+	height:1%;
+	text-align:center;
+    font-size:16px;
+}
+a:link {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+} 
+a:active {
+	text-decoration:none;
+}
+a:visited {
+	text-decoration:none;
+}
+a.botmenu_A:hover {
+	color:rgb(100, 2, 100);
+	border-bottom: 5px solid rgb(147, 47, 167);
+	height:23px;
+}
+a.botmenu_A:active {
+	color:rgb(100, 2, 100);
+	font-size:14.3px;
+}
+a.botmenu_B {
+	color:#ccc;
+	float:right;
+	width:28%;
+	height:1%;
+	text-align:center;
+    font-size:16px;
+}
+a:link {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+} 
+a:active {
+	text-decoration:none;
+}
+a:visited {
+	text-decoration:none;
+}
+a.botmenu_B:hover {
+	color:rgb(100, 2, 100);
+	border-bottom: 5px solid rgb(147, 47, 167);
+	height:23px;
+}
+a.botmenu_B:active {
+	color:rgb(100, 2, 100);
+	font-size:14.3px;
+}
+
+a.botmenu_C {
+	float:left;
+	width:100%;
+	height:100%;
+}
+a:link {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+} 
+a:active {
+	text-decoration:none;
+}
+a:visited {
+	text-decoration:none;
+}
+a.botmenu_C:hover {
+	text-decoration:none;
+}
+a.botmenu_C:active {
+    text-decoration:none;
+}
+
+a.canal {
+	color: #ccc;
+	width:28%;
+	height:1%;
+    font-size:16px;
+}
+a:link {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+} 
+a:active {
+	text-decoration:none;
+}
+a:visited {
+	text-decoration:none;
+}
+
+#slider{
+    width: 80%;
+    height: 30%;
+    background-color: #2f2f2f;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display:left;
+    color: #fff;
+    padding-top: 0.1%;
+    padding-bottom: 1.5%;
+}
+#stats{
+    width: 80%;
+    height: 750px;
+    background-color: #313;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display:left;
+    color: #fff;
+    padding-top: 1%;
+}
+.Grafico_A{
+    width:40%;
+    height: 40%;
+    display: inline-block;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.st_a{
+    font-size: 15px;
+    color: white;
+    display: left;
+    background-color: #212;
+}
+
+#formu{
+    color: #fff;
+}
+
+#perfil_text{
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#body_streams{
+    width: 80%;
+    height: 5%;
+    background-color: #0f0f0f;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    padding-top: 1%;
+    color: #fff;
+}
+
+#body_streams_B{
+    width: 80%;
+    height: 70%;
+    background-color: #606;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    padding-top: 1%;
+    color: #fff;
+}
+
+body{
+    background-color: #999;
+}
+
+#body_s{
+    width: 80%;
+    height: 78%;
+    background-color: #0f0f0f;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    padding-top: 1%;
+}
+
+#body_s_B{
+    width: 80%;
+    height: 150%;
+    background-color: #0d0d0d;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    padding-top: 1%;
+}
+
+#body_about{
+    width: 70%;
+    height: 140%;
+    background-color: #eee;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: left;
+    color:rgb(120, 2, 120);
+    font-size: 50px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+li{
+    margin-left:15%;
+    display: center;
+    padding-top: 2%;
+    padding-left: 2%;
+    color:rgb(100, 4, 100);
+    font-size: 20px;
+}
+
+#font_about{
+    color:rgb(100, 4, 100);
+    font-size: 30px;
+    display: left;
+    padding-left: 5%;
+}
+
+#kanvasA{
+    width: 29%;
+    height: 95%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+}
+#kanvasB{
+    width: 69%;
+    height: 95%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    align-content: left;
+}
+
+#kanvasB_B{
+    width: 69%;
+    height: 95%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    align-content: left;
+}
+
+.kanvasC{
+    width: 97%;
+    height: 28%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-top: 1.5%;
+    margin-left: 0.8%;
+    float: left;
+    text-align: left;   
+    color: white;
+}
+
+.kanvasD{
+    width: 95%;
+    height: 47%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    padding-top: 1%;
+    padding-left: 1%;
+    float: left;
+    text-align: left;
+}
+.kanvasE{
+    width: 97%;
+    height: 97%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-top: 1.5%;
+    margin-left: 0.8%;
+    padding-top: 1%;
+    padding-left: 1%;
+    float: left;
+    text-align: left;
+}
+
+.kanvasF{
+    width: 97%;
+    height: 15%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-top: 1.5%;
+    display: inline-block;
+}
+
+#confi{
+    background-color: #0c0c0c;
+    color: purple;
+    width: 87%;
+    height: 25%; 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-top: 25%;
+    margin-left: 4%;
+    border-radius: 10%;
+    text-align: center;
+    padding-top: 10%;
+}
+
+footer{
+    width: 80%;
+    height: 15%;
+    background-color:#0c0c0c;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#footer{
+    padding-top: 1%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
