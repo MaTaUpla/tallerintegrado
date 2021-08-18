@@ -138,7 +138,7 @@ a:visited {
 #slider{
     width: 80%;
     height: 30%;
-    background-color: #2f2f2f;
+    background-color: #101;
     border-left: 1px solid black;
     border-right: 1px solid black;
     display:left;
@@ -156,6 +156,14 @@ a:visited {
     color: #fff;
     padding-top: 1%;
 }
+
+#text-graph{
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 1%;
+}
+
 .Grafico_A{
     width:40%;
     height: 40%;
@@ -163,6 +171,7 @@ a:visited {
     color: white;
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 20px;
 }
 
 .st_a{
@@ -173,7 +182,33 @@ a:visited {
 }
 
 #formu{
+    padding-top: 4%;
     color: #fff;
+}
+
+#topGame{
+    width: 95%;
+    height: 470px;
+    background-color: #313;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display:left;
+    color: #fff;
+    padding-top: 1%;
+}
+
+.Grafico_B{
+    width:32%;
+    height: 32%;
+    display: inline-block;
+    color: white;
+}
+
+.st_b{
+    font-size: 15px;
+    color: white;
+    display: left;
+    background-color: #212;
 }
 
 #perfil_text{
@@ -182,6 +217,38 @@ a:visited {
     display: inline-block;
     padding-left: 1%;
     padding-right: 1%;
+}
+
+#sumary_text{
+    background-color: #303;
+    color: #fff;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+#canvas_A{
+    width: 47%;
+    height: 400px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    margin-right:0.7%;
+    margin-left:1.2%;
+    float:left;
+}
+
+#canvas_B{
+    width: 47%;
+    height: 400px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    margin-left:0.7%;
 }
 
 #body_streams{
@@ -198,7 +265,7 @@ a:visited {
 
 #body_streams_B{
     width: 80%;
-    height: 70%;
+    height: 450px;
     background-color: #606;
     border-top: 1px solid black;
     border-left: 1px solid black;
@@ -214,13 +281,18 @@ body{
 
 #body_s{
     width: 80%;
-    height: 78%;
+    height: 500PX;
     background-color: #0f0f0f;
     border-top: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: inline-block;
     padding-top: 1%;
+}
+
+#graph{
+    width: 70%;
+    height: 90%;
 }
 
 #body_s_B{
@@ -274,8 +346,6 @@ li{
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: inline-block;
-    float: left;
-    margin-left: 1%;
 }
 #kanvasB{
     width: 69%;
@@ -285,7 +355,6 @@ li{
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: inline-block;
-    align-content: left;
 }
 
 #kanvasB_B{
