@@ -5,6 +5,8 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+    {% block head %}
+    {% endblock %}
 <head>
 <body>
 <center>
@@ -16,9 +18,6 @@
             <a href="/" class="botmenu_A">Home</a>
             <a href="/Streamer" class="botmenu_A">Buscador</a>
             <a href="/About" class="botmenu_A">About</a>
-        </div>
-        <div id="menu_B">
-            <a href="Perfil" class="botmenu_B">Perfil</a>
         </div>
     </header>
     {% block content %}
