@@ -11,8 +11,6 @@ TOKEN = 'p5ujweure88momot9uj4jwn0o7swv7'
 HEADERS = {'Client-ID': ID, 'Authorization': f'Bearer {get_access_token()}' }
 INDENT = 2
 
-
-
 #OBTENER RESPONSE DE LA LLAMADA DE TWITCH API
 def get_response(query):
   url = BASE_URL + query
@@ -30,16 +28,26 @@ def get_user_query(user_login):
   return 'users?login={0}'.format(user_login)
 
 def get_topgames():
-  url = BASE_URL + 'games/top?limit=5'
+  url = BASE_URL + 'games/top?first=6'
   response = requests.get(url, headers=HEADERS)
   return response
 
-def get_top():
-  url = BASE_URL + 'users/follows?to_id='
+def get_follows(user_id):
+  url = BASE_URL + 'users/follows?to_id={0}'.format(user_id)
+  response = requests.get(url, headers=HEADERS)
+  return response
+
+def get_followed(user_id):
+  url = BASE_URL + 'users/follows?from_id={0}'.format(user_id)
   response = requests.get(url, headers=HEADERS)
   return response
 
 def get_toplive():
   url = BASE_URL + 'streams?first=4'
+  response = requests.get(url, headers=HEADERS)
+  return response
+
+def get_st(user_id):
+  url = BASE_URL + 'users/blocks?broadcaster_id={0}'.format(user_id)
   response = requests.get(url, headers=HEADERS)
   return response
