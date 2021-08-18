@@ -1,4 +1,4 @@
-{% extends 'base.html'%}
+% extends 'base.html'%}
 {% block title %}
 Taller Integral
 {% endblock %}
@@ -14,6 +14,14 @@ Taller Integral
     <div id="perfil_text">Canal: <a href="https://twitch.tv/{{ data.nombre }}" class="canal">{{ data.nombre }}</a> </div>
 </div>
 <div id="body_streams_B">
+    <div id="canvas_A">
+        <img src="{{ data.offline }}" width="100%" height="70%"><Br>
+        <div id="sumary_text">descripcion del canal: {{ data.sumary }}</div>        
+    </div>
+    <div id="canvas_B">
+        <div id="sumary_text">streamer {{ data.nombre }} cuenta con {{ data.seguidores }} de seguidores y con {{ data.siguiendo }} siguiendo</div>
+        <img src="{{ url_for('static', filename='img/stats.png') }}" width="100%" height="100%">
+    </div>
 </div>
 <footer>
     <div id="footer">
