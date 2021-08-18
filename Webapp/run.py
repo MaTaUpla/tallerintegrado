@@ -11,10 +11,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-
   fig,ax = plt.subplots(figsize=(10,8))
   ax = sns.set_style(style="dark")
-
   live = {}
   live['data'] = []
   live_stream = []
@@ -56,16 +54,51 @@ def home():
   canvas=FigureCanvas(fig)
   img=io.BytesIO()
   fig.savefig('static/img/grafico.png')
-
   return render_template("home.html",data=data)
 
 @app.route('/Streamer', methods=["POST","GET"])
 def profile():
+  query = api_twitch.get_topgames()
+  data = api_twitch.print_response(query)
+  #print(data)
+  topGame = {}
+  topGame['data'] = []
+  Games = []
+  w = json.loads(data)
+  for x in range(6):
+    z = w["data"][x]
+    topGame['data'].append(z)
+  for y in range(6):
+    Games.append(topGame['data'][y]['id'])
+    Games.append(topGame['data'][y]['name'])
+    uwu = topGame['data'][y]['box_art_url']
+    thumbnail = uwu.replace('{width}x{height}', '1280x720')
+    Games.append(thumbnail)
+  data = {
+    'id' : Games[0],
+    'name' : Games[1],
+    'banner' : Games[2],
+    'id2' : Games[3],
+    'name2' : Games[4],
+    'banner2' : Games[5],
+    'id3' : Games[6],
+    'name3' : Games[7],
+    'banner3' : Games[8],
+    'id4' : Games[9],
+    'name4' : Games[10],
+    'banner4' : Games[11],
+    'id5' : Games[12],
+    'name5' : Games[13],
+    'banner5' : Games[14],
+    'id6' : Games[15],
+    'name6' : Games[16],
+    'banner6' : Games[17],
+  }
   if request.method == 'POST':
     user = request.form["nm"]    
     return redirect(url_for("user", usr=user))
   else:
-    return render_template("detail.html")
+    return render_template("detail.html", data=data)
 
 @app.route('/Streamer/<usr>')
 def user(usr):
@@ -74,17 +107,52 @@ def user(usr):
   query = api_twitch.get_user_query(usr)
   response = api_twitch.get_response(query)
   data = api_twitch.print_response(response)
+  #######################
   x = json.loads(data)
   y = x["data"][0]
   streamer['data'].append(y)
-  print(data)
+  id_capo = y['id']
+  queryB = api_twitch.get_follows(id_capo)
+  dataB = api_twitch.print_response(queryB)
+  v = json.loads(dataB)
+  follows = v['total']
+  #print(follows)
+  #######################
+  queryC = api_twitch.get_followed(id_capo)
+  dataC = api_twitch.print_response(queryC)
+  #print(dataC)
+  h = json.loads(dataC)
+  followed = h['total']
+  #print(followed)
+  #print(data)
+  if(y['offline_image_url'] != ""):
+    print('no es nulo')
+    background_def = y['offline_image_url']
+  else:
+    print('es nulo')
+    background_def = '/static/img/def.png'
+
   data = {
     'nombre' : usr,
     'fecha' : y['created_at'],
     'visitas' : y['view_count'],
     'partner' : y['broadcaster_type'],
-    'foto_perfil' : y['profile_image_url']
+    'foto_perfil' : y['profile_image_url'],
+    'sumary' : y['description'],
+    'offline' : background_def,
+    'seguidores' : follows,
+    'siguiendo' : followed
   }
+
+  fig,ax = plt.subplots(figsize=(10,8))
+  ax = sns.set_style(style="dark")
+  x = ['seguidores','siguiendo']
+  y = [follows,followed]
+  sns.barplot(x,y)
+  canvas=FigureCanvas(fig)
+  img=io.BytesIO()
+  fig.savefig('static/img/stats.png')
+
   return render_template("detail_B.html", data=data)
 
 @app.route('/About')
